@@ -1,2 +1,2 @@
 #!/bin/bash
-grep 'field' | cut -d "\"" -f 2
+grep "field" | grep "$1" | awk -F "[<>]" '{print $3}'
