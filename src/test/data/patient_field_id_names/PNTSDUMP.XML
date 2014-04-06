@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<table_data_name name="PNT_RCD_11_0_7_14_16">
+    <rows>
+        <field name="id">910997967</field>
+        <field name="age">75-84</field>
+        <field name="gndr">F</field>
+        <field name="inc">32000-47999</field>
+    </rows>
+    <rows>
+        <field name="id">506013497</field>
+        <field name="age">75-84</field>
+        <field name="gndr">M</field>
+        <field name="inc">16000-23999</field>
+    </rows>
+    <rows>
+        <field name="id">432041392  </field>
+        <field name="age">85+</field>
+        <field name="gndr">M</field>
+        <field name="inc">&lt;16000</field>
+    </rows>
+    <rows>
+        <field name="id">633048699ab</field>
+        <field name="age">65-74</field>
+        <field name="gndr">F</field>
+        <field name="inc">32000-47999</field>
+    </rows>
+    <rows>
+        <field name="id">633048699</field>
+        <field name="age">65-74</field>
+        <field name="inc">32000-47999</field>
+    </rows>
+    <rows>
+        <field name="id">554425673</field>
+        <field name="age">&lt;65</field>
+        <field name="gender">M</field>
+        <field name="inc">&lt;16000</field>
+    </rows>
+</table_data_name>
