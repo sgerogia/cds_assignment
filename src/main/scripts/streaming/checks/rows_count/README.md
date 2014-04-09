@@ -1,0 +1,1 @@
+Output total number of <rows> elements in the XML; useful for sanity check comparisons

@@ -53,7 +53,7 @@ public class AsciiDelimitedTextLoaderTest {
 				"lines_with_date = foreach lines generate ToDate(date, 'yyyyMMdd') as date, (long)patient, operation, field1, field2;",
 				"grouped_lines = group lines_with_date by date;",
 				"store grouped_lines into 'parsed_lines';", };
-		// assumes UTC timezone
+		// assumes UTC timezone of machine
 		String[] expectedOutput = {
 				"(2011-01-14T00:00:00.000Z,{(2011-01-14T00:00:00.000Z,198158662,0604,,456)})",
 				"(2011-01-20T00:00:00.000Z,{(2011-01-20T00:00:00.000Z,71159871,0096,123,),(2011-01-20T00:00:00.000Z,875784891,0204,123,456)})" };
