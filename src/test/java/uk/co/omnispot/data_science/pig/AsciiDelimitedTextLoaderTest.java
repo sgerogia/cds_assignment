@@ -1,20 +1,12 @@
 package uk.co.omnispot.data_science.pig;
 
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
 
 import org.apache.pig.pigunit.PigTest;
 import org.junit.Before;
 import org.junit.Test;
-import org.python.google.common.io.Files;
 
-import uk.co.omnispot.data_science.input.AsciiDelimitedTextRecordReader;
-
-import com.google.common.base.Charsets;
-import com.google.common.io.CharStreams;
-
-public class AsciiDelimitedTextLoaderTest {
+public class AsciiDelimitedTextLoaderTest extends BasePigTest {
 
 	private final static String ASCII_RES = "/uk/co/omnispot/data_science/pig/ascii_delimited.txt";
 
@@ -23,7 +15,7 @@ public class AsciiDelimitedTextLoaderTest {
 	@Before
 	public void setUp() throws Exception {
 
-		tmp = createTempAsciiTextFile();
+		tmp = createTempAsciiTextFile(ASCII_RES);
 	}
 
 	@Test
@@ -61,19 +53,4 @@ public class AsciiDelimitedTextLoaderTest {
 		test.assertOutput(expectedOutput);
 	}
 
-	private File createTempAsciiTextFile() throws IOException {
-
-		String raw = CharStreams.toString(new InputStreamReader(getClass()
-				.getResourceAsStream(ASCII_RES), Charsets.US_ASCII));
-		String converted = raw
-				.replace(".",
-						AsciiDelimitedTextRecordReader.FIELD_DELIMITER_STRING)
-				.replace("|",
-						AsciiDelimitedTextRecordReader.RECORD_DELIMITER_STRING)
-				.replace("\n", "");
-		File tmp = File.createTempFile("AsciiDelimitedTextLoaderTest", ".data");
-		tmp.deleteOnExit();
-		Files.append(converted, tmp, Charsets.US_ASCII);
-		return tmp;
-	}
 }

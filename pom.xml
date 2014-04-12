@@ -21,6 +21,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<junit.version>4.11</junit.version>
 		<pig.version>0.11.0-cdh4.4.0</pig.version>
+		<piggybank.version>0.12.0</piggybank.version>
 		<hadoop.core.version>2.0.0-mr1-cdh4.4.0</hadoop.core.version>
 		<hadoop.version>2.0.0-cdh4.4.0</hadoop.version>
 		<antlr.version>3.5.2</antlr.version>
