@@ -23,7 +23,7 @@ public class XmlConvertScriptTest extends BasePigTest {
 	@Test
 	public void shouldConvertFile() throws Exception {
 
-		test = getTestObject(SCRIPT, ALL_OK);
+		test = getAsciiTestObject(SCRIPT, ALL_OK);
 		test.assertOutput(new String[] { "(910997967,&lt;75,F,32000-47999)",
 				"(506013497,75-84,M,16000-23999)",
 				"(432041392,85+,M,&lt;16000)", "(432041392,85+,M,35000+)" });

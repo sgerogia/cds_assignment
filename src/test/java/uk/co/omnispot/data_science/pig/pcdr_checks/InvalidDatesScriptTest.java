@@ -24,20 +24,20 @@ public class InvalidDatesScriptTest extends BaseCheckScriptTest {
 	@Test(expected = FrontendException.class)
 	public void shouldFailForIncorrectFormat() throws Exception {
 
-		test = getTestObject(SCRIPT, ERROR_DATA1);
+		test = getAsciiTestObject(SCRIPT, ERROR_DATA1);
 		test.assertOutput(new String[] {});
 	}
 
 	@Test(expected = FrontendException.class)
 	public void shouldFailForIncorrectNumber() throws Exception {
 
-		test = getTestObject(SCRIPT, ERROR_DATA2);
+		test = getAsciiTestObject(SCRIPT, ERROR_DATA2);
 		test.assertOutput(new String[] {});
 	}
 
 	@Test
 	public void allOkForCorrectData() throws Exception {
-		test = getTestObject(SCRIPT, ALL_OK);
+		test = getAsciiTestObject(SCRIPT, ALL_OK);
 		test.assertOutput(new String[] {});
 	}
 }

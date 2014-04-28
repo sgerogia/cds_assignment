@@ -14,14 +14,14 @@ public class InvalidFieldLengthsScriptTest extends BaseCheckScriptTest {
 	@Test
 	public void shouldFindWrongLengths() throws Exception {
 
-		test = getTestObject(SCRIPT, ERROR_DATA);
+		test = getAsciiTestObject(SCRIPT, ERROR_DATA);
 		test.assertOutput(new String[] { "(20110114,198158662,604,,)",
 				"(2011012012,875784891,0204,,)", "(20110120,75784891,0204,,)" });
 	}
 
 	@Test
 	public void allOkForCorrectData() throws Exception {
-		test = getTestObject(SCRIPT, ALL_OK);
+		test = getAsciiTestObject(SCRIPT, ALL_OK);
 		test.assertOutput(new String[] {});
 	}
 }

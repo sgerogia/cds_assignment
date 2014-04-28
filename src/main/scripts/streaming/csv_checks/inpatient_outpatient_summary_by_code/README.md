@@ -1,0 +1,1 @@
+Count unique DRG and APC codes from the Medicare inpatient/outpatient "summary by code" charge files

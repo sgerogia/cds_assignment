@@ -14,13 +14,13 @@ public class InvalidProceduresScriptTest extends BaseCheckScriptTest {
 	@Test
 	public void shouldFindWrongPatientId() throws Exception {
 
-		test = getTestObject(SCRIPT, ERROR_DATA);
+		test = getAsciiTestObject(SCRIPT, ERROR_DATA);
 		test.assertOutput(new String[] { "(20110120,875784891,02a4,,)" });
 	}
 
 	@Test
 	public void allOkForCorrectData() throws Exception {
-		test = getTestObject(SCRIPT, ALL_OK);
+		test = getAsciiTestObject(SCRIPT, ALL_OK);
 		test.assertOutput(new String[] {});
 	}
 }

@@ -1,0 +1,1 @@
+Converts the patient XML document to a tab delimited file

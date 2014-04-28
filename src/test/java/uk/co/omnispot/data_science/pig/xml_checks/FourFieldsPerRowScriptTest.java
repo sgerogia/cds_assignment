@@ -30,7 +30,7 @@ public class FourFieldsPerRowScriptTest extends BasePigTest {
 	@Test
 	public void shouldDetectMissingGender() throws Exception {
 
-		test = getTestObject(SCRIPT, NO_GENDER);
+		test = getAsciiTestObject(SCRIPT, NO_GENDER);
 		test.assertOutput(new String[] { "(506013497,75-84,,16000-23999)",
 				"(432041392,85+,,&lt;16000)" });
 	}
@@ -38,7 +38,7 @@ public class FourFieldsPerRowScriptTest extends BasePigTest {
 	@Test
 	public void shouldDetectMissingId() throws Exception {
 
-		test = getTestObject(SCRIPT, NO_ID);
+		test = getAsciiTestObject(SCRIPT, NO_ID);
 		test.assertOutput(new String[] { "(,75-84,F,32000-47999)",
 				"(,75-84,M,16000-23999)" });
 	}
@@ -46,7 +46,7 @@ public class FourFieldsPerRowScriptTest extends BasePigTest {
 	@Test
 	public void shouldDetectMissingAge() throws Exception {
 
-		test = getTestObject(SCRIPT, NO_AGE);
+		test = getAsciiTestObject(SCRIPT, NO_AGE);
 		test.assertOutput(new String[] { "(910997967,,F,32000-47999)",
 				"(506013497,,M,16000-23999)" });
 	}
@@ -54,14 +54,14 @@ public class FourFieldsPerRowScriptTest extends BasePigTest {
 	@Test
 	public void shouldDetectMissingIncome() throws Exception {
 
-		test = getTestObject(SCRIPT, NO_INCOME);
+		test = getAsciiTestObject(SCRIPT, NO_INCOME);
 		test.assertOutput(new String[] { "(506013497,75-84,M,)",
 				"(432041392,85+,M,)" });
 	}
 
 	@Test
 	public void allOkForCorrectData() throws Exception {
-		test = getTestObject(SCRIPT, ALL_OK);
+		test = getAsciiTestObject(SCRIPT, ALL_OK);
 		test.assertOutput(new String[] {});
 	}
 

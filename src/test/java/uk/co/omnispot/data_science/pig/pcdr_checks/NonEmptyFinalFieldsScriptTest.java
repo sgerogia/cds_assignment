@@ -14,14 +14,14 @@ public class NonEmptyFinalFieldsScriptTest extends BaseCheckScriptTest {
 	@Test
 	public void shouldFindNonEmptyFields() throws Exception {
 
-		test = getTestObject(SCRIPT, ERROR_DATA);
+		test = getAsciiTestObject(SCRIPT, ERROR_DATA);
 		test.assertOutput(new String[] { "(20110120,875784891,0204,,bar)",
 				"(20110120,875784891,0204,foo,)" });
 	}
 
 	@Test
 	public void allOkForCorrectData() throws Exception {
-		test = getTestObject(SCRIPT, ALL_OK);
+		test = getAsciiTestObject(SCRIPT, ALL_OK);
 		test.assertOutput(new String[] {});
 	}
 }
