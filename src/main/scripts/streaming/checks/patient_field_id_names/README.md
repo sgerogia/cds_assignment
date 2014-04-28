@@ -1,1 +1,0 @@
-Shows the different //field/@id element values along with counts
