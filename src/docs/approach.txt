@@ -1,0 +1,37 @@
+XML checks
+----------
+- xml_checks/patient_field_id_names: Shows the different //field/@id element values along with counts
+- xml_checks/patient_field_unique_values: For the different //field/@id shows:
+* //field[@id = 'age']: List of unique values and counts
+* //field[@id = 'gndr']: List of unique values and counts
+* //field[@id = 'inc']: List of unique values and counts
+* //field[@id = 'id']: List of value lengths and counts
+- xml_checks/rows_count: Output total number of <rows> elements in the XML; useful for sanity check comparisons with other checks
+- pig/xml_checks: Consistency checks of the patient file using Pig's loader
+- 
+
+Pig CSVLoader checks
+----------------------
+- pig/csv_checks/inpatinet_outpatient_charge: Count unique DRG and APC codes from the Medicare inpatient/outpatient charge files
+Generate total line count
+This will verify the regular expression for code extraction to be used in the Pig scripts
+- pig/csv_checks/inpatient_outpatient_summary_by_code: Same as above
+- pig/csv_checks/inpatient_outpatient_summary_by_code_state: Same as above
+
+Custom Pig ASCII delimited loader unit tests
+- pig/pcdr_checks
+
+
+Answers
+
+1a) Used data by provider
+Verified with data by state
+Similar in top two, 3rd was a close one 
+TODO: Re-calculate data
+
+2b) Unique provider-operation combination -> no need to calculate additional averages
+
+
+
+
+
