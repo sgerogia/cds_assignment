@@ -31,7 +31,9 @@ TODO: Re-calculate data
 
 2b) Unique provider-operation combination -> no need to calculate additional averages
 
+2c) When averaging take number of discharges into account and normalize for the area
 
+2d) Similar to 2b
 
 
 

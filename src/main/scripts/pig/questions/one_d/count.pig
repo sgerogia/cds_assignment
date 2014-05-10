@@ -26,9 +26,7 @@ group_by_code = GROUP code_provider_charge BY operationCode;
 top_provider_by_difference = FOREACH group_by_code { 
     orderedTmp = ORDER code_provider_charge BY difference DESC;
     filteredTmp = LIMIT orderedTmp 1;
-    GENERATE 
-        FLATTEN(filteredTmp.provider) AS provider,
-        FLATTEN(filteredTmp.operationCode) AS operationCode;
+    GENERATE FLATTEN(filteredTmp);
 };
 
 group_by_provider = GROUP top_provider_by_difference BY provider;
